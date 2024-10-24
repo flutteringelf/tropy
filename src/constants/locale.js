@@ -15,5 +15,5 @@ const LOCALE = {
 
 export const supportedLanguages = Object.keys(LOCALE).sort()
 
-LOCALE.default = 'en'
+LOCALE.default = 'cn'
 export default LOCALE

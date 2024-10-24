@@ -6,7 +6,7 @@ cn:
     trash: 删除文件
     unlisted: Unlisted Items
   toolbar:
-    import: 导入图片
+    import: 导入素材
     items: |-
       {count, plural,
       =0 {此视图中没有项目}
@@ -99,8 +99,8 @@ cn:
       type:
         label: 请选择库中图片的存储方式
         option:
-          tpy: 链接图片
-          managed: 导入图片
+          tpy: 链接素材
+          managed: 导入素材
         hint:
           tpy: 链接到原始位置的照片。
           managed: 在导入时将照片复制到库文件夹中。

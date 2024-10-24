@@ -26,6 +26,7 @@ import {
   BrowserWindow,
   ipcMain as ipc,
   nativeTheme,
+  globalShortcut,
   systemPreferences as prefs
 } from 'electron'
 
@@ -150,7 +151,9 @@ export class WindowManager extends EventEmitter {
 
       // TODO check position on display!
       var win = new BrowserWindow(opts)
-
+      globalShortcut.register('Control+Shift+I', () => {
+        win.webContents.toggleDevTools();
+      });
       if (opts.fixedSize) {
         this.setFixedSize(win, true, opts.fixedSize)
       }

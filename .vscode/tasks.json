@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      // 这是一个使用 npm 启动项目到示例，指定脚本 dev
+      // 注意：设置不同 type 类型时，相应的可用参数是跟随变化的
+      {
+        "label": "npm: dev",
+        "type": "npm",
+        "script": "start",
+        "problemMatcher": [],
+        "detail": "cross-env NODE_ENV=development DEBUG=xx:mysql:client webpack-cli -w --hide-modules --config webpack.dev.js",
+        "options": {
+          "env": {
+            "NODE_ENV": "development",
+            "DEBUG": "xx:mysql:client"
+          }
+        }
+      },
+      // 这是另一种启动方式
+      // 1. 使用 nvm 切换到指定 Node 版本；2. 紧接着使用 npm 启动；3. 通过 options 追加额外参数
+      {
+        "label": "start dev",
+        "type": "shell",
+        "command": "source ~/.zshrc && nvm use 10 && npm run dev",
+        "options": {
+          "env": {
+            "NODE_ENV": "development",
+            "DEBUG": "xx:mysql:*"
+          }
+        }
+      }
+    ]
+  }
+  
